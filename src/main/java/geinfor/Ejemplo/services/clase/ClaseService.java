@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface ClaseService {
 
-    ClaseModel getClasePorId(int id) throws NoFindException;
+    ClaseModel getClaseById(int id) throws NoFindException;
 
     List<ClaseModel> getClaseList(HttpHeaders headers);
 

@@ -4,6 +4,7 @@ import geinfor.Ejemplo.entity.entities.AlumnoClasePK;
 import geinfor.Ejemplo.entity.entities_extends.AlumnoClaseExtends;
 import geinfor.Ejemplo.exception.NoFindException;
 import geinfor.Ejemplo.models.AlumnoClaseModel;
+import geinfor.Ejemplo.models.AlumnoClaseSaveModel;
 import org.springframework.http.HttpHeaders;
 
 import java.util.List;
@@ -22,5 +23,5 @@ public interface AlumnoClaseService {
 
     void deleteAlumnoClase(Integer codigo, String nif) throws NoFindException;
 
-    void saveOrModifyAlumnoClase(AlumnoClaseExtends alumnoClase);
+    void saveOrModifyAlumnoClase(AlumnoClaseSaveModel alumnoClase) throws NoFindException;
 }

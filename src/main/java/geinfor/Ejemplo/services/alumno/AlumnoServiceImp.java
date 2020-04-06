@@ -1,5 +1,6 @@
 package geinfor.Ejemplo.services.alumno;
 
+import geinfor.Ejemplo.constantes.ConstantesExcepciones;
 import geinfor.Ejemplo.entity.entities_extends.AlumnoExtends;
 import geinfor.Ejemplo.entity.entities_extends.ClaseExtends;
 import geinfor.Ejemplo.entity.entities_repository.AlumnoRepository;
@@ -34,7 +35,7 @@ public class AlumnoServiceImp implements AlumnoService {
         try {
             alumno = this.alumnoRepository.findById(id).orElse(null);
             if (alumno == null) {
-                throw new NoFindException("No se ha encotrado la clase");
+                throw new NoFindException(ConstantesExcepciones.ALUMNO_CLASE_NOT_FOUND);
             }
             return ObjectMapperUtils.map(alumno, AlumnoModel.class);
         } finally {
@@ -59,7 +60,7 @@ public class AlumnoServiceImp implements AlumnoService {
         try {
             alumno = this.alumnoRepository.findById(nif).orElse(null);
             if (alumno == null) {
-                throw new NoFindException("No se ha encotrado la clase");
+                throw new NoFindException(ConstantesExcepciones.ALUMNO_CLASE_NOT_FOUND);
             }
             this.alumnoRepository.delete(alumno);
         } finally {
@@ -69,8 +70,8 @@ public class AlumnoServiceImp implements AlumnoService {
 
     @Override
     public void saveOrModifyAlumno(AlumnoExtends alumno) throws NoFindException {
-        if (!alumno.getDni().equals("")) {
-            throw new NoFindException("No se ha encotrado la clase");
+        if (alumno.getDni().equals("")) {
+            throw new NoFindException("El nif no puede estar vacio");
         }
         this.alumnoRepository.save(alumno);
     }

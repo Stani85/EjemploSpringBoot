@@ -4,6 +4,7 @@ import geinfor.Ejemplo.entity.entities.AlumnoClasePK;
 import geinfor.Ejemplo.entity.entities_extends.AlumnoClaseExtends;
 import geinfor.Ejemplo.exception.NoFindException;
 import geinfor.Ejemplo.models.AlumnoClaseModel;
+import geinfor.Ejemplo.models.AlumnoClaseSaveModel;
 import geinfor.Ejemplo.services.alumno_clase.AlumnoClaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -45,7 +46,7 @@ public class AlumnoClaseController {
     }
 
     @PutMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void saveOrUpdateAlumnoClase(@RequestBody AlumnoClaseExtends alumnoClase)  {
+    public void saveOrUpdateAlumnoClase(@RequestBody AlumnoClaseSaveModel alumnoClase) throws NoFindException {
         this.alumnoClaseService.saveOrModifyAlumnoClase(alumnoClase);
     }
 

@@ -1,5 +1,6 @@
 package geinfor.Ejemplo.services.clase;
 
+import geinfor.Ejemplo.constantes.ConstantesExcepciones;
 import geinfor.Ejemplo.entity.entities_extends.ClaseExtends;
 import geinfor.Ejemplo.entity.entities_repository.ClaseRepository;
 import geinfor.Ejemplo.exception.NoFindException;
@@ -28,12 +29,12 @@ public class ClaseServiceImp implements ClaseService {
 
     @Override
     @Transactional
-    public ClaseModel getClasePorId(int id) throws NoFindException {
+    public ClaseModel getClaseById(int id) throws NoFindException {
         ClaseExtends clase;
         try {
             clase = this.claseRepository.findById(id).orElse(null);
             if (clase == null) {
-                throw new NoFindException("No se ha encotrado la clase");
+                throw new NoFindException(ConstantesExcepciones.CLASE_NOT_FOUND);
             }
             return ObjectMapperUtils.map(clase, ClaseModel.class);
         } finally {
@@ -58,7 +59,7 @@ public class ClaseServiceImp implements ClaseService {
         try {
             clase = this.claseRepository.findById(id).orElse(null);
             if (clase == null) {
-                throw new NoFindException("No se ha encotrado la clase");
+                throw new NoFindException(ConstantesExcepciones.CLASE_NOT_FOUND);
             }
             this.claseRepository.delete(clase);
         } finally {

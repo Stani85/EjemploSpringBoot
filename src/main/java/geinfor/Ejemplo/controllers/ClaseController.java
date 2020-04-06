@@ -28,8 +28,8 @@ public class ClaseController {
     ClaseService claseService;
 
     @GetMapping(value = "/{id}")
-    public ClaseModel getClasePorId(@PathVariable("id") int id) throws NoFindException {
-        return this.claseService.getClasePorId(id);
+    public ClaseModel getClaseById(@PathVariable("id") int id) throws NoFindException {
+        return this.claseService.getClaseById(id);
     }
 
     @GetMapping(value = "/")

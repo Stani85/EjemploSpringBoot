@@ -17,8 +17,8 @@ public class AlumnoClaseModel {
 
     protected AlumnoClasePK alumnoClasePK;
     private Date fechaAlta;
-    private AlumnoExtends alumno;
-    private ClaseExtends clase;
+    private AlumnoModel alumno;
+    private ClaseModel clase;
 
     public AlumnoClaseModel() {
     }
@@ -39,19 +39,19 @@ public class AlumnoClaseModel {
         this.fechaAlta = fechaAlta;
     }
 
-    public AlumnoExtends getAlumno() {
+    public AlumnoModel getAlumno() {
         return alumno;
     }
 
-    public void setAlumno(AlumnoExtends alumno) {
+    public void setAlumno(AlumnoModel alumno) {
         this.alumno = alumno;
     }
 
-    public ClaseExtends getClase() {
+    public ClaseModel getClase() {
         return clase;
     }
 
-    public void setClase(ClaseExtends clase) {
+    public void setClase(ClaseModel clase) {
         this.clase = clase;
     }
 }

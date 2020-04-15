@@ -1,7 +1,5 @@
 package geinfor.Ejemplo.services.alumno_clase;
 
-import geinfor.Ejemplo.entity.entities.AlumnoClasePK;
-import geinfor.Ejemplo.entity.entities_extends.AlumnoClaseExtends;
 import geinfor.Ejemplo.exception.NoFindException;
 import geinfor.Ejemplo.models.AlumnoClaseModel;
 import geinfor.Ejemplo.models.AlumnoClaseSaveModel;

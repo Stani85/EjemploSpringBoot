@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.0.BUILD-SNAPSHOT'
+	id 'org.springframework.boot' version '2.2.6.BUILD-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
 }
@@ -31,7 +31,9 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation 'org.springframework.security:spring-security-test'
+
 	compile group: 'com.ibm.db2.jcc', name: 'db2jcc', version: 'db2jcc4'
+
 	compile group: 'org.modelmapper', name: 'modelmapper', version: '0.7.5'
 }
 

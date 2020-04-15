@@ -1,7 +1,5 @@
 package geinfor.Ejemplo.controllers;
 
-import geinfor.Ejemplo.entity.entities.AlumnoClasePK;
-import geinfor.Ejemplo.entity.entities_extends.AlumnoClaseExtends;
 import geinfor.Ejemplo.exception.NoFindException;
 import geinfor.Ejemplo.models.AlumnoClaseModel;
 import geinfor.Ejemplo.models.AlumnoClaseSaveModel;
@@ -12,7 +10,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
 

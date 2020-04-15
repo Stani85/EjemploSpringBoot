@@ -2,12 +2,9 @@ package geinfor.Ejemplo.services.alumno;
 
 import geinfor.Ejemplo.constantes.ConstantesExcepciones;
 import geinfor.Ejemplo.entity.entities_extends.AlumnoExtends;
-import geinfor.Ejemplo.entity.entities_extends.ClaseExtends;
 import geinfor.Ejemplo.entity.entities_repository.AlumnoRepository;
-import geinfor.Ejemplo.entity.entities_repository.ClaseRepository;
 import geinfor.Ejemplo.exception.NoFindException;
 import geinfor.Ejemplo.models.AlumnoModel;
-import geinfor.Ejemplo.models.ClaseModel;
 import geinfor.Ejemplo.utils.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

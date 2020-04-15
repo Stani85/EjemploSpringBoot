@@ -27,7 +27,6 @@ public class AlumnoClase implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fechaAlta;
 
-
     public AlumnoClase() {
     }
 
